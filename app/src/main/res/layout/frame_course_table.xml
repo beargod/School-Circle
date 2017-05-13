@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:id="@+id/addCourseTable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar
+            android:id="@+id/loading"
+            android:layout_gravity="center"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:mlpb_arrow_height="5dp"
+            app:mlpb_arrow_width="10dp"
+            android:layout_marginTop="20dp"
+            app:mlpb_background_color="@color/loadingBack"
+            app:mlpb_enable_circle_background="true"
+            app:mlpb_progress_stoke_width="5dp"
+            app:mlpb_show_arrow="true" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/account_layout"
+            style="@style/edit_text"
+            android:hint="请输入教务账号"
+            app:passwordToggleEnabled="true">
+            <EditText
+                android:id="@+id/account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/pwd_layout"
+            style="@style/edit_text"
+            android:hint="请输入教务账号"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/get"
+            style="@style/button1"
+            android:layout_marginBottom="20dp"
+            android:text="获取课程信息" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/showCourseTable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <cn.zhouchaoyuan.excelpanel.ExcelPanel
+            android:id="@+id/course_table"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:left_cell_width="56dp"
+            app:normal_cell_width="56dp"
+            app:top_cell_height="56dp" />
+    </LinearLayout>
+</FrameLayout>
